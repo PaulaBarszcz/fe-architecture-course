@@ -1,0 +1,11 @@
+.wrap {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width .4s ease;
+}
