@@ -1,0 +1,160 @@
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 99;
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow-y: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  z-index: 1;
+}
+
+.brand { display: flex; align-items: center; gap: 10px; }
+
+.brandIcon {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.brandName {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-bright);
+}
+
+.closeBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav { padding: 12px 0 24px; flex: 1; }
+
+.module { margin-bottom: 4px; }
+
+.moduleHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px 6px;
+}
+
+.moduleIcon { font-size: 14px; }
+
+.moduleTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-bright);
+  flex: 1;
+  letter-spacing: -.01em;
+}
+
+.moduleCount {
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.progressWrap {
+  padding: 0 20px 8px;
+}
+
+.lessons {
+  list-style: none;
+  padding: 0;
+}
+
+.lessonBtn {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 20px;
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  color: var(--text-dim);
+  text-align: left;
+  font-size: 12.5px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all .12s;
+}
+
+.lessonBtn:hover {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.lessonActive {
+  background: var(--surface2) !important;
+  color: var(--text-bright) !important;
+  border-left-width: 2px !important;
+}
+
+.lessonDone { color: var(--text) !important; }
+
+.lessonStatus {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  flex-shrink: 0;
+  padding-top: 2px;
+  width: 12px;
+  color: inherit;
+}
+
+.lessonDone .lessonStatus { color: #22c55e; }
+
+.lessonTitle { flex: 1; }
+
+.lessonDur {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .overlay { display: block; }
+
+  .sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    transition: left .25s ease;
+    box-shadow: 4px 0 24px rgba(0,0,0,.4);
+  }
+
+  .sidebar.open { left: 0; }
+
+  .closeBtn { display: block; }
+}
