@@ -1,14 +1,3 @@
-What’s in the course:
-6 modules, 18 lessons with interactive quizzes
-
-Progress saved in localStorage (persists after refresh)
-
-Mobile drawer and keyboard navigation (← →)
-
-Code examples with "copy to clipboard" functionality
-
-Everything covered in this conversation—from Atomic Design to FE Systems Design
-
 # FE Architecture Course
 
 Interaktywny kurs architektury frontendowej — React, wzorce, systems design.
@@ -61,3 +50,18 @@ Strona będzie dostępna pod:
 - **Architektura aplikacji** — Feature-Sliced Design, Monorepo (Nx/Turborepo)
 - **SOLID w React** — SRP, OCP, DIP w praktyce
 - **FE Systems Design** — framework 8 kroków, case study News Feed
+
+
+short, EN contents summary:
+
+- ## What’s in the course:
+
+6 modules, 18 lessons with interactive quizzes
+
+Progress saved in localStorage (persists after refresh)
+
+Mobile drawer and keyboard navigation (← →)
+
+Code examples with "copy to clipboard" functionality
+
+Everything covered in this conversation—from Atomic Design to FE Systems Design
